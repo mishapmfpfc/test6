@@ -6,7 +6,7 @@ import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
+  templateUrl: './product-details.component.html', 
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
@@ -27,7 +27,6 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   getProductByProductId(id: number): Product {
-
     for (const i in this.dataService.products) {
       if (this.dataService.products[i].id == id) {
         return this.dataService.products[i];
